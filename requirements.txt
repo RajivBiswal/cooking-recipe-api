@@ -1,4 +1,5 @@
 django==2.2
 djangorestframework==3.9.2
+psycopg2-binary
 
 flake8==3.9.0
