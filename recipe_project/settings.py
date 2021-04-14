@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # userdefined app
     'core',
     'user',
+    'receipe',
 ]
 
 MIDDLEWARE = [
