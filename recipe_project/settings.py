@@ -129,6 +129,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # 127.0.0.1:8000/static
+MEDIA_URL = '/media/'   # 127.0.0.1:8000/media
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# MEDIA_ROOT = '/vol/web/media'    # where media file stored in local machine
+# STATIC_ROOT = '/vol/web/static' # where static file stored in local machine
+"""django use collectstaticfiles command which collect all the dependancy
+    of static files and combined them and store them in static root"""
 
 AUTH_USER_MODEL = 'core.User'
